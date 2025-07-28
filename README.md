@@ -4,6 +4,8 @@
 ## Overview
 `AlluxioPathMappingFileIO` is a custom `FileIO` implementation for[Apache Iceberg](https://iceberg.apache.org/) that allows seamless redirection of read operations to [Alluxio](https://www.alluxio.io/) while maintaining write/delete operations directly on Google Cloud Storage (GCS). This can be useful for performance optimization in read-heavy Iceberg workloads, where leveraging Alluxio's in-memory caching and tiered storage helps reduce latency and cloud I/O costs.
 It works by intercepting file read requests and dynamically replacing the GCS base path with an Alluxio base path, ensuring reads are served from Alluxio if available. Write and delete operations are intentionally kept direct-to-GCS to maintain consistency and durability of the data lake. This design improves performance and reduces cloud I/O, all while remaining fully compatible with existing Iceberg catalog and table configurations.
+<img width="649" height="558" alt="image" src="https://github.com/user-attachments/assets/4de42061-c49a-4e03-b015-c214e90e71d9" />
+
 
 ## Features
 
