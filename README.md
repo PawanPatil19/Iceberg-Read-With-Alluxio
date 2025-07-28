@@ -16,11 +16,6 @@ It works by intercepting file read requests and dynamically replacing the GCS ba
 
 ---
 
-## Motivation
-
-In cloud-based data lakes using Iceberg over object stores like GCS, I/O latency for metadata operations and frequent file reads can become a bottleneck. Alluxio provides a distributed cache and file system abstraction that improves read performance. This `FileIO` implementation allows you to transparently use Alluxio for reading Iceberg metadata and data files, while ensuring data integrity by writing directly to the object store.
-
----
 
 ## Usage
 
