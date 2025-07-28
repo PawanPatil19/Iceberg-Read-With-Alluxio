@@ -11,7 +11,7 @@ It works by intercepting file read requests and dynamically replacing the GCS ba
 
 - **Read-through Alluxio**: Transparently maps GCS paths to Alluxio for input operations (e.g., reading metadata or data files).
 - **Write-through to GCS**: Ensures output operations (e.g., writing manifest/data files) are committed to GCS.
-- **Prefix operations support**: Supports listing and deleting files with prefix operations using the correct target path.
+- **Prefix operations support**: Supports listing with prefix operations using the correct target path.
 - **Easy integration with Iceberg**: Implements Iceberg’s `FileIO`, `HadoopConfigurable`, and `SupportsPrefixOperations`.
 
 ---
